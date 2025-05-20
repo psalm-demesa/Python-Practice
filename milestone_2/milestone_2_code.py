@@ -1,15 +1,20 @@
+import re
 #Ask user for a password
-password = input("Type in a password:")
-#Check the number of characters
+password = input("Enter a password:")
+#Counting and grouping the variables
 x = len(password)
 #Compare and print
-if x >= 1 and x <= 5:
-    print("{} is too short!" .format(password))
-    print("Password needs to have atleast 10 characters.")
-elif x > 5 and x <=10:
-    print("{} is not strong enough." .format(password))
-    print("Improve password by adding 3 more characters.")
-elif x > 10 and x <= 15:
-    print("{} is average.".format(password))
+if len(password) < 10:
+    print("Password must have atleast 10 characters.")
+if not re.search (r"[a-z]", password):
+    print("Password must have atleast 1 lowercase letter.")
+if not re.search (r"[A-Z]", password):
+    print("Password must have aleast 1 uppercase letter.")
+if not re.search (r"[\d]", password):
+    print("password must have atleast 1 number.")
+if re.search(r"[!#$%^&*?]", password):
+    print("Password must only contain any of these special characters: @ . _")
+elif len(password) >= 10 and (r"[a-z]") and (r"[A-Z]") and (r"[\d]") and (r"[@ . _]"):
+    print("Password is strong.")
 else:
-    print("The password is invalid.")
+    print("Password is weak.")
