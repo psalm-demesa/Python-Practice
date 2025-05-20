@@ -14,7 +14,7 @@ if not re.search (r"[\d]", password):
     print("password must have atleast 1 number.")
 if re.search(r"[!#$%^&*?]", password):
     print("Password must only contain any of these special characters: @ . _")
-elif len(password) >= 10 and (r"[a-z]") and (r"[A-Z]") and (r"[\d]") and (r"[@ . _]"):
+if len(password) >= 10 and (r"[a-z]", password) and (r"[A-Z]", password) and (r"[\d]", password) and (r"[@ . _]", password):
     print("Password is strong.")
 else:
     print("Password: \"{}\" is weak." .format(password))
