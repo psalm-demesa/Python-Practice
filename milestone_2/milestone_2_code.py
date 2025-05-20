@@ -17,4 +17,4 @@ if re.search(r"[!#$%^&*?]", password):
 elif len(password) >= 10 and (r"[a-z]") and (r"[A-Z]") and (r"[\d]") and (r"[@ . _]"):
     print("Password is strong.")
 else:
-    print("Password is weak.")
+    print("Password: \"{}\" is weak." .format(password))
