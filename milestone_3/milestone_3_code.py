@@ -17,7 +17,7 @@ while True:
         answer1.lower
         if answer1 == "inside out":
             print("Correct!")
-            score =+ 1
+            score += 1
         elif answer1 == "":
             print("Hello? Are you there?")
         else:
@@ -28,7 +28,7 @@ while True:
         answer2.lower
         if answer2 == "dune":
             print("Correct!")
-            score =+ 1
+            score += 1
         elif answer2 == "":
             print("Hello? Are you there?")
         else:
@@ -40,7 +40,7 @@ while True:
         answer3.lower
         if answer3 == "walt disney" or answer3 == "disney":
             print("Correct!")
-            score =+ 1
+            score += 1
         elif answer3 == "":
             print("Hello? Are you there?")
         else:
@@ -50,7 +50,7 @@ while True:
         answer4.lower
         if answer4 == "true":
             print("Correct!")
-            score =+ 1
+            score += 1
         if answer4 == "false":
             print("Incorrect!")
         elif answer4 == "":
@@ -64,7 +64,7 @@ while True:
         answer5.lower
         if answer5 == "robert downey jr" or answer5 == "rdj" or answer5 == "robert downey jr.":
             print("Correct!")
-            score =+ 1
+            score += 1
         elif answer5 == "":
             print("Hello? Are you there?")
         else:
@@ -74,12 +74,14 @@ while True:
         answer6.lower
         if answer6 == "deadpool":
             print("Corret!")
+            score += 1
         elif answer6 == (""):
             print("Hello? Are you there?")
         else:
             print("The answer is Deadpool.")
         breakpoint
-        print("Thank you for playing the quiz.")
+        print("Thank you for playing the quiz. You got {} out of 6 questions." .format(score))
+        break
     #Ask the user if they would like to exit the quiz  
     if start == "no":
         exit = input("Would you like to exit the game?")
